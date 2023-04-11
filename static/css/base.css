@@ -1,18 +1,29 @@
 body {
  font-family: "Source Sans Pro", sans-serif;
  font-size: 18px;
+ background: rgb(5, 7, 23);
 }
 
 header {
  border-bottom: 1px solid #999;
- margin-bottom: 2rem;
+ margin: 2rem;
+}
+
+header h1 {
  display: flex;
- background-color: blueviolet;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.login {
+ font-size: 25px;
+ color: rgb(247, 247, 247);
 }
 
 header h1 a {
- color: red;
+ color: rgb(247, 247, 247);
  text-decoration: none;
+ text-align: center;
 }
 
 .nav-left {
@@ -26,23 +37,39 @@ header h1 a {
 
 .post-entry {
  margin-bottom: 2rem;
+ background-color: rgb(15, 18, 40);
+ border-radius: 0.75rem;
+ padding: 15px;
+}
+
+.post-entry:hover {
+ background-color: rgb(27, 33, 72);
 }
 
 .post-entry h2 {
  margin: 0.5rem 0;
+ color: rgb(164, 217, 241);
 }
 
 .post-entry h2 a,
 .post-entry h2 a:visited {
- color: blue;
+ color: rgb(164, 217, 241);
  text-decoration: none;
 }
 
 .post-entry p {
  margin: 0;
  font-weight: 400;
+ color: rgb(204, 231, 243);
 }
 
 .post-entry h2 a:hover {
- color: red;
+ color: rgb(0, 174, 255);
+}
+
+form {
+ width: 50%;
+ margin-left: 50%;
+ transform: translateX(-50%);
+ color: aliceblue;
 }

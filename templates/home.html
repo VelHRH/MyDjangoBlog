@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block content %} {% for post in object_list %}
-<div class="post-entry">
+<div class="post-entry" style="width: 90%; margin-left:50%; transform: translateX(-50%)">
  <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
  <p>{{ post.body }}</p>
 </div>

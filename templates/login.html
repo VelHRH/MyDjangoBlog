@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="login" style="text-align: center; font-size: 30px; font-weight: 600">
+ Login
+</h1>
+<br />
+<form action="" method="POST">
+ {% csrf_token %}
+ <div class="mb-3">
+  <label for="exampleInputUN" class="form-label">Username</label>
+  <input type="text" class="form-control" id="exampleInputUN" name="username" />
+ </div>
+ <div class="mb-3" style="margin-top: 15px">
+  <label for="exampleInputPassword1" class="form-label">Password</label>
+  <input
+   type="password"
+   class="form-control"
+   id="exampleInputPassword1"
+   name="password"
+  />
+ </div>
+ <input type="submit" value="Submit" style="color: black; margin-top: 20px" />
+</form>
+{% endblock content %}
