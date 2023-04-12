@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %} {% for post in object_list %}
-<div class="post-entry" style="width: 90%; margin-left:50%; transform: translateX(-50%)">
- <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
- <p>{{ post.body }}</p>
+<div class="post-entry" style="width: 80%; margin-left:50%; transform: translateX(-50%)">
+ <h2><strong><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></strong></h2>
+ <p>{{ post.body|slice:":50" }}... </p>
 </div>
 {% endfor %} {% endblock content %}
