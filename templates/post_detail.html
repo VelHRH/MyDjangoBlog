@@ -2,7 +2,7 @@
 <div style="width: 90%; margin-left:50%; transform: translateX(-50%)">
   <div style="border-bottom: solid 2px rgb(221, 221, 244); color:rgb(221, 221, 244)">
     <h2><strong> {{ post.title }} </strong></h2>
-    <p style="text-align: justify;">{{ post.body }}</p>
+    <p style="text-align: justify; margin-top: 40px;">{{ post.body }}</p>
   </div>
   <div style="margin-top: 30px">
     <h2 style="color:rgb(221, 221, 244)">Comments</h2>
@@ -18,11 +18,11 @@
     {% endif %}
   </div>
   {% if user.is_authenticated %}
-  <form action="" method="POST" style="margin-top: 30px" id="comment-form">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" style="color: black" />
+    <form action="" method="POST" style="margin-top: 30px" id="comment-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Submit" style="color: black" />
    </form>
-   {% endif %}
+  {% endif %}
 </div>
 {% endblock content %}

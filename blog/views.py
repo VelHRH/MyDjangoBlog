@@ -1,7 +1,8 @@
 from django.views.generic import ListView
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Post, Comment
+from .models import Post
 from .forms import CommentForm
+from django.contrib import messages
 
 class BlogListView(ListView):
     model = Post
@@ -17,6 +18,7 @@ def add_comment_to_post(request, pk):
             comment.post = post
             comment.name = request.user
             comment.save()
+            messages.success(request, ('Comment added!'))
             return redirect('post_detail', pk=post.pk)
     else:
         form = CommentForm()
